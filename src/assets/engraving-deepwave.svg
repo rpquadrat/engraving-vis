@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 107.717 107.717" style="enable-background:new 0 0 107.717 107.717;" xmlns="http://www.w3.org/2000/svg">
+  <style>
+		.align-center{text-anchor:middle;}
+    	.align-left{text-anchor:start;}
+    	.align-right{text-anchor:end;}
+    	.font-type-1{font-family:"Source Sans 3";}
+    	.text-prop{font-size:4.4px; fill:#000000; letter-spacing: 0.01em; text-rendering="optimizeLegibility";}
+	</style>
+
+	<text id="g-vis-text-1" class="align-center font-type-1 text-prop" x="31" y="40.5">Jubiläum 2024</text>
+	<text id="g-vis-text-2" class="align-center font-type-1 text-prop" x="31" y="46">21.04.1865</text>
+	<text id="g-vis-text-3" class="align-center font-type-1 text-prop" x="31" y="51.5">techn. Prototyp</text>
+</svg>

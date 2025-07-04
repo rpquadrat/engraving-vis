@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.engraver {
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.engraver-overlay-bg {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.engraver-overlay {
+    position: fixed;
+    width: 650px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.engraver-title {
+    padding: 16px 24px;
+    margin: 0 -12px;
+    background: #e56c0b;
+    color: white;
+    font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.engraver-content {
+    padding: 32px 24px 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.engraver-close-button {
+    position: absolute !important;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.engraver-text-controls .input-field {
+    margin-bottom: 16px;
 }

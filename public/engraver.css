@@ -1,0 +1,206 @@
+/** SVG Styles **/
+#g-vis-engraving .align-center {
+  text-anchor: middle;
+}
+#g-vis-engraving .align-left {
+  text-anchor: start;
+}
+#g-vis-engraving .align-right {
+  text-anchor: end;
+}
+#g-vis-engraving .font-type-1 {
+  font-family: Source Sans Pro, sans-serif;
+}
+#g-vis-engraving .text-prop {
+  font-size: 4.4px;
+  fill: #727272;
+  letter-spacing: 0.05px;
+  text-shadow: #f0f0f0 0.1em 0.2em 0;
+}
+
+.engraver {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.engraver-overlay-bg {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.engraver-overlay {
+  position: fixed;
+  width: 90%;
+  max-width: 960px;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: white;
+  overflow: auto;
+}
+@media screen and (max-width: 599px) {
+  .engraver-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+.engraver-title {
+  padding: 0 24px;
+  margin: 0 -12px;
+  color: black;
+  border-top: 5px solid #e56c0b;
+}
+@media screen and (max-width: 599px) {
+  .engraver-title {
+    padding: 0 4px;
+  }
+}
+.engraver-content {
+  padding: 16px 24px;
+  color: black;
+}
+@media screen and (max-width: 599px) {
+  .engraver-content {
+    padding: 4px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .engraver .save-button {
+    margin-top: 0;
+  }
+}
+.engraver-image svg {
+  border: 1px solid #cccccc;
+}
+.engraver-ideas {
+  padding: 16px 24px;
+  color: black;
+}
+@media screen and (max-width: 599px) {
+  .engraver-ideas {
+    padding: 4px;
+  }
+}
+.engraver-ideas .accordion {
+  background-color: white;
+}
+.engraver-ideas .accordion__panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+.engraver-ideas .ideas-boxes-item {
+  background-color: #cccccc;
+  color: #3a3a3a;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+.engraver-ideas .ideas-boxes-item:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 599px) {
+  .engraver-ideas .ideas-boxes-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.engraver-ideas .ideas-boxes-item p {
+  margin: 0;
+  text-align: center;
+  text-shadow: #f0f0f0 0.03em 0.06em 0;
+}
+.engraver-faqs {
+  padding: 16px 24px 32px;
+  color: black;
+}
+@media screen and (max-width: 599px) {
+  .engraver-faqs {
+    padding: 4px;
+  }
+}
+.engraver-faqs p {
+  margin-top: 0;
+}
+.engraver .engraver-close-button {
+  position: absolute !important;
+  top: 24px;
+  right: 32px;
+  cursor: pointer;
+  margin-top: 0;
+  width: auto;
+}
+@media screen and (max-width: 599px) {
+  .engraver .engraver-close-button {
+    top: 16px;
+    right: 16px;
+  }
+}
+.engraver-text-controls h3 {
+  margin-top: 0;
+}
+
+/**
+* ----------------------------------------------
+* Accordion
+* ----------------------------------------------
+**/
+.accordion {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.accordion .accordion__item + .accordion__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.accordion__button {
+  background-color: #f4f4f4;
+  color: #444;
+  cursor: pointer;
+  padding: 12px 12px 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+.accordion__button:hover {
+  background-color: #ddd;
+}
+.accordion__button:before {
+  display: inline-block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+.accordion__button[aria-expanded=true]::before, .accordion__button[aria-selected=true]::before {
+  transform: rotate(45deg);
+}
+.accordion__panel {
+  padding: 16px 16px 0;
+  animation: fadein 0.35s ease-in;
+  color: black;
+}
+.accordion [hidden] {
+  display: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import Visualizer from './Visualizer';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('app-root');
+const root = ReactDOM.createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Visualizer root={rootElement} />
 );
 
 // If you want to start measuring performance in your app, pass a function

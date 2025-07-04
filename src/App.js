@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Visualizer from './Visualizer';
 
-function App() {
+function App(props) {
+
+  const [overlay, setOverlay] = useState(false);
+
+  function handleOverlay() {
+    setOverlay(!overlay);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="engraver-control">
+        <button className="engraver-control-btn" onClick={handleOverlay}>Editor öffnen</button>
+      </div>
+        <Visualizer />
     </div>
   );
 }

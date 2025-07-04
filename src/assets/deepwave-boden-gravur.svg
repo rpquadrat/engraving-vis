@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_8" data-name="Ebene 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 136.063 136.063">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #706f6f;
+        font-family: ArialMT, Arial;
+        font-size: 5px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(33.391 57.016)"><tspan x="0" y="0">Gravur für</tspan></text>
+  <text class="cls-1" transform="translate(28.714 62.907)"><tspan x="0" y="0">Leon Guinand</tspan></text>
+  <image width="800" height="800" transform="translate(-.776 -.239) scale(.171)" xlink:href="../../../../../Users/rolandpavic/Daten/guinand temp/deepwave-boden.jpg"/>
+</svg>

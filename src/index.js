@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Visualizer from './Visualizer';
+import Visualizer from './components/Visualizer';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('app-root');

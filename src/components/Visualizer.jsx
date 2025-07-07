@@ -1,13 +1,10 @@
-import {useEffect, useRef, useState} from "react";
-import { subscribe, unsubscribe } from "./events";
+import {useEffect, useState} from "react";
+import { subscribe, unsubscribe } from "../events";
 import VizCanvas from "./VizCanvas";
 import TextControls from './TextControls';
 import Faqs from "./Faqs";
 import Ideas from './Ideas';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import contentData from './content';
+import contentData from '../content';
 
 const alignLeft = {style: "left", value: "29"}; // left
 const alignCenter = {style: "center", value: "45.5"}; // center
@@ -54,7 +51,7 @@ function Visualizer(props) {
     return () => {
       unsubscribe("showVisualizer", closeOverlay);
     }
-  }, []);
+  },[appConfig.firstLineDisabled, appConfig.firstLinePlaceholder, appData]);
 
   useEffect(() => {
     const docLang = document.documentElement.lang;
@@ -121,18 +118,18 @@ function Visualizer(props) {
   return (
     isOpen && <div className="engraver" style={{opacity: opacity}}>
       <div className="engraver-overlay-bg"></div>
-        <Container className="engraver-overlay -color-inverted">
-          <Row className="engraver-title">
-            <Col xs={12}>
+        <div className="container engraver-overlay -color-inverted">
+          <div className="row engraver-title">
+            <div className='col-12'>
               <h3>{appLang === "de" ? contentData.de.title : contentData.en.title}</h3>
               <button type="button" className="engraver-close-button -tertiary" aria-hidden="false" aria-label="Close" onClick={closeOverlay}>X</button>
-            </Col>
-          </Row>
-          <Row className="engraver-content">
-          <Col className="engraver-image" xs={12} md={7}>
+            </div>
+          </div>
+          <div className="row engraver-content">
+          <div className="engraver-image col-xs-12 col-md-7">
             <VizCanvas firstLine={appData.firstLine} secondLine={appData.secondLine} thirdLine={appData.thirdLine} align={appData.align} />
-          </Col>
-          <Col className="engraver-tools" xs={12} md={5}>
+          </div>
+          <div className="engraver-tools col-xs-12 col-md-5">
             <TextControls
               introText={appLang === "de" ? contentData.de.introText : contentData.en.introText}
               contentData={appLang === "de" ? contentData.de : contentData.en}
@@ -141,21 +138,21 @@ function Visualizer(props) {
               inputHandler={inputHandler}
               alignHandler={alignHandler}
               saveData={saveData} />
-          </Col>
-          </Row>
-          <Row className="engraver-ideas">
-            <Col xs={12}>
+          </div>
+          </div>
+          <div className="row engraver-ideas">
+            <div className="col-12">
               <h3>{appLang === "de" ? contentData.de.ideasHeader : contentData.en.ideasHeader}</h3>
               <Ideas items={appLang === "de" ? contentData.de.ideasData : contentData.en.ideasData} />
-            </Col>
-          </Row>
-          <Row className="engraver-faqs">
-            <Col xs={12}>
+            </div>
+          </div>
+          <div className="row engraver-faqs">
+            <div className="col-12">
               <h3>{appLang === "de" ? contentData.de.faqsHeader : contentData.en.faqsHeader}</h3>
               <Faqs items={appLang === "de" ? contentData.de.faqsData : contentData.en.faqsData} />
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
 
     </div>
   );

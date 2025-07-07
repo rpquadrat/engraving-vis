@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Visualizer from './Visualizer';
+import Visualizer from './components/Visualizer';
 
 function App(props) {
 

@@ -1,5 +1,5 @@
 import * as React from "react"
-import bgImage from "./assets/images/deepwave-boden.jpg"
+import bgImage from "../assets/images/deepwave-boden.jpg"
 function VizCanvas(props) {
   return (
     <svg
